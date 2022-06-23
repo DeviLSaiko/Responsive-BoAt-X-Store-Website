@@ -4,7 +4,7 @@
 :root{
     --orange:#ff7800;
     --black:#130f40;
-    --lighting-color: #666;
+    --lighting-color: rgb(255, 255, 255);
     --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
     --border:.2rem solid rgba(0,0,0,.1);
     --outline:.2rem solid rgba(0,0,0,.1);
@@ -43,6 +43,23 @@ body{
     box-shadow: var(--box-shadow);
 }
 
+.btncheckout{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem ;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid var(--black);
+    color: var(--black);
+    cursor: pointer;
+    align-items: center;
+}
+.btncheckout:hover{
+
+    background: var(--orange);
+    color: var(--lighting-color);
+}
+
 .Header .Logo {
     font-size: 2rem;
     font-weight: bolder;
@@ -60,6 +77,7 @@ body{
 }
 .Header .navbar a:hover {
     color: var(--orange);
+
 }
 .Header .icons div {
     height: 4rem;
@@ -75,6 +93,7 @@ body{
 .Header .icons div:hover {
     background: var(--orange);
     color:#eee;
+    cursor: pointer;
 }
 
 #menu-btn{
@@ -118,15 +137,19 @@ body{
 }
 .Header .shoping-cart{
     position:absolute ;
-    top: 110%; right: 1rem;
+    top: 110%; right:-110%;
     padding: 1rem;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
-    width: 32rem;
+    width: 30rem;
     background: #fff;
 }
+.Header .shoping-cart.active{
+    right: 5rem;
+    transition: .4s  linear;
+}
 .Header .shoping-cart .box{
-
+ 
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -150,11 +173,30 @@ body{
 .Header .shoping-cart .box .fa-trash:hover{
     color: var(--orange);
 } 
-.Header .shoping-cart .box .content{
+.Header .shoping-cart .box .content h3{
     color: var(--black);
     font-size: 1.3rem;
     padding-bottom: 1rem;
 }
+.Header .shoping-cart .box .content span{
+    color: var(--lighting-color);
+    font-size: 1.3rem;
+     
+}
+.Header .shoping-cart .box .content .Qty{
+    padding:1rem ;
+}
+.Header .shoping-cart .total{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+.Header .shoping-cart .btncheckout{
+    display: block;
+    text-align:center;
+
+}
+
 
 
 
