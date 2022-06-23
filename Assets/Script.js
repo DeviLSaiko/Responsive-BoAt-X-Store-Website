@@ -11,3 +11,9 @@ document.querySelector('#Cart-btn').onclick = () =>{
     shopingcart.classList.toggle('active');
 
 }
+let menubtn =document.querySelector('.navbar');
+
+document.querySelector('#menu-btn').onclick = () =>{
+    shopingcart.classList.toggle('active');
+
+}
